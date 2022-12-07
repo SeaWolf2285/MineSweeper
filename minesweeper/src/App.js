@@ -10,7 +10,7 @@ export const Context = React.createContext();
 function App() {
 const [height, setHeight] = useState(10);
 const [width, setWidth] = useState(10);
-const [mines, setMines] = useState(5);
+const [mines, setMines] = useState(10);
 const [grid, setGrid] = useState([]);
   
 
@@ -20,8 +20,8 @@ const [grid, setGrid] = useState([]);
         value={{grid, setGrid, height, setHeight, width, setWidth, mines, setMines}}>
         <Router>
           <Routes>
-            <Route path="/home" element={<Home />} />
-            <Route path="/" element={<Board />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/game" element={<Board />} />
           </Routes>
         </Router>
       </Context.Provider>
